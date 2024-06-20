@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Inclui o arquivo de estilo externo -->
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        /* CSS inline para evitar o arquivo separado, mas idealmente deve estar no estilo.css */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Open Sans"; /* Define a família de fontes para todos os elementos */
+        }
+
+        .laranja {
+            background-color: rgb(243,173,43); /* Cor de fundo laranja */
+            transition: all 0.25s ease-in-out; /* Transição suave para mudanças de propriedade */
+        }
+
+        .vermelho {
+            background-color: rgb(175,40,43); /* Cor de fundo vermelha */
+            transition: all 0.25s ease-in-out; /* Transição suave para mudanças de propriedade */
+        }
+
+        .roxo {
+            background-color: rgb(109,29,109); /* Cor de fundo roxa */
+            transition: all 0.25s ease-in-out; /* Transição suave para mudanças de propriedade */
+        }
+
+        button {
+            padding: 5px 10px; /* Espaçamento interno do botão */
+            border: 0; /* Remove a borda do botão */
+            border-radius: 5px; /* Borda arredondada */
+            color: white; /* Cor do texto */
+            cursor: pointer; /* Mostra o cursor como ponteiro ao passar sobre o botão */
+            font-size: 22px; /* Tamanho da fonte */
+            font-weight: 300; /* Peso da fonte */
+            margin: 0 10px; /* Margem ao redor do botão */
+        }
+
+        .conteiner {
+            position: absolute; /* Posição absoluta em relação ao viewport */
+            top: 50%; /* Alinha o topo do container ao centro vertical */
+            left: 50%; /* Alinha a esquerda do container ao centro horizontal */
+            transform: translate(-50%, -50%); /* Centraliza o container */
+            min-width: 90vw; /* Largura mínima de 90% da largura do viewport */
+            text-align: center; /* Alinha o texto centralmente dentro do container */
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <!-- Botões que mudam a classe do body para alterar o estilo de fundo -->
+        <button class="laranja" id="btn-laranja">laranja</button>
+        <button class="vermelho" id="btn-vermelho">vermelho</button>
+        <button class="roxo" id="btn-roxo">roxo</button>
+    </div>
+
+    <script>
+        // JavaScript para mudar a classe do body ao clicar nos botões
+        document.getElementById("btn-laranja").addEventListener('click', function() {
+            document.body.setAttribute("class", "laranja"); // Define a classe do body como "laranja"
+        });
+
+        document.getElementById("btn-vermelho").addEventListener('click', function() {
+            document.body.setAttribute("class", "vermelho"); // Define a classe do body como "vermelho"
+        });
+
+        document.getElementById("btn-roxo").addEventListener('click', function() {
+            document.body.setAttribute("class", "roxo"); // Define a classe do body como "roxo"
+        });
+    </script>
+</body>
+</html>
